@@ -1,0 +1,28 @@
+.analyzing_container{
+    position: relative;
+    margin: 1.5rem 2rem;
+    padding: 1rem;
+}
+
+.analyzing_data_container{
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+}
+
+.analyzing_data{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.analyzing_data_value{
+    font-size: var(--font-size-title);
+    font-weight: 700;
+}
+
+.analyzing_data_title{
+    text-align: center;
+}
+

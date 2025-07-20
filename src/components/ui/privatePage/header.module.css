@@ -1,0 +1,156 @@
+header{
+
+}
+
+.assist_nav{
+    height: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:0 5rem;
+    font-size: var(--font-size-medium);
+    border-bottom: 2px solid var(--secondary-color);
+}
+.system_time{
+    position: relative;
+    height: 100%;
+    line-height: 1.75rem;
+    color: var(--secondary-text-color);
+}
+
+.system_time::before{
+    position: absolute;
+    content: "";
+    width: 300%;
+    height: 100%;
+    background-color: var(--secondary-color);
+    transform: skew(-30deg) translateX(-30%);
+    z-index: -1;
+}
+
+.social_media{
+    display: flex;
+    column-gap: 1rem;
+}
+
+.sm_icon:hover{
+    color: var(--secondary-color);
+    cursor: pointer;
+}
+
+nav{
+    display: flex;
+    height: 4rem ;
+    align-items: center;
+    font-size: var(--font-size-medium);
+}
+
+.hdr_bx{
+    display: flex;
+    justify-content: center;
+}
+
+.left{
+    flex: 1.5;
+}
+
+.navs{
+    display: flex;
+    column-gap: 2rem;
+    list-style-type: none;
+}
+
+.nav__menu{
+    position: relative;
+    cursor: pointer;
+    font-weight: 600;
+    transition: color .3s ease-in-out;
+}
+
+.nav__menu::before{
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    border-bottom: 2px solid var(--secondary-color);
+    transition: width .3s ease-in-out;
+}
+
+.nav__menu:hover::before{
+    width: 100%;
+}
+
+.nav__menu:hover{
+    color: var(--secondary-color);
+}
+
+.nav__menu.active::before{
+    width: 100%;
+}
+
+
+.middle{
+    justify-content: start;
+    flex: 5.5;
+}
+
+.right{
+    flex: 3;
+    display: flex;
+    column-gap: 1rem;
+}
+
+.button{
+    padding: var(--btn-padding-small);
+    border-radius: var(--btn-radius);
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.button_text{
+    display: inline-block;
+    overflow: hidden;
+}
+
+.button:hover .button_text{
+    animation: text_hop 2s infinite;
+}
+
+.enroll{
+    color: var(--secondary-text-color);
+    background-color: var(--secondary-color);
+    border: 1px solid var(--secondary-color);
+    transition: all .3s ease-in-out;
+}
+
+.enroll:hover{
+    color: var(--secondary-color);
+    background-color: transparent;
+}
+
+.signin{
+    color: var(--default-color);
+    background-color: transparent;
+    border: 1px solid var(--default-color);
+    transition: all .3s ease-in-out;
+}
+
+.signin:hover{
+    color: var(--secondary-text-color);
+    background-color: var(--secondary-color);
+    border: none;
+}
+
+@keyframes text_hop {
+    0%,20%,40%{
+        transform: translateY(0);
+    }
+    10%{
+        transform: translateY(-0.15rem);
+    }
+    30%{
+        transform: translateY(-0.10rem);
+    }
+}

@@ -1,0 +1,71 @@
+.auth_page{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+.auth_frame__left{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.auth_frame__right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+}
+
+.auth_frame__shape{
+    width: 800px;
+    height: 200px;
+    background-color: red;
+    clip-path: url(#clipPath);
+    position: absolute;
+}
+
+.shape1{
+    transform: rotate(60deg);
+    background: linear-gradient(90deg,var(--third-color),var(--fourth-color),var(--secondary-color));
+    bottom: 0;
+    left: -55%;
+}
+
+.shape2{
+    transform: rotate(60deg) scale(0.5);
+    background: linear-gradient(90deg,var(--third-color),var(--fourth-color),var(--secondary-color));
+    top: 20%;
+    left: -50%;
+}
+
+.shape3{
+    transform: rotate(60deg) scale(2);
+    background: linear-gradient(90deg,var(--secondary-color),var(--fourth-color),var(--third-color));
+    top: 120%;
+    left: 45%;
+}
+
+.shape4{
+    transform: rotate(60deg) scale(1.1);
+    background: linear-gradient(90deg,var(--secondary-color),var(--fourth-color),var(--third-color));
+    top: -15%;
+    right: -20%;
+}
+
+.auth_form{
+    min-width: 25rem;
+    width: 70%;
+    padding: 2rem;
+    border-radius: 1rem;
+    background-color: var(--third-color);
+    animation: form_shadow .5s forwards;
+}
+
+@keyframes form_shadow {
+    to{
+        box-shadow: .5rem .5rem .1rem var(--default-color);
+    }
+}
